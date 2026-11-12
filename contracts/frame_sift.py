@@ -43,7 +43,7 @@ def fetch_json(url):
         fail('Source unavailable or invalid JSON')
 
 
-def agreed(sample):
+def verifier(sample):
     def verify(leader):
         try:
             local = sample()
@@ -54,7 +54,7 @@ def agreed(sample):
             return False
         return isinstance(leader, gl.vm.Return) and local == leader.calldata
 
-    return gl.vm.run_nondet_unsafe(sample, verify)
+    return verify
 
 
 def observe_book(url):
@@ -68,7 +68,7 @@ def observe_book(url):
             fail('Invalid codebook')
         return [[token, obj[token]] for token in sorted(obj)]
 
-    return agreed(sample)
+    return gl.vm.run_nondet_unsafe(sample, verifier(sample))
 
 
 def ambiguity(book):
@@ -141,7 +141,7 @@ def observe_frame(url, expected, book, book_hash):
         return {'seq': expected, 'bits': bits, 'book_sha256': book_hash,
                 'tokens': decode(bits, book)}
 
-    return agreed(sample)
+    return gl.vm.run_nondet_unsafe(sample, verifier(sample))
 
 
 class FrameSift(gl.Contract):

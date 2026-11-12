@@ -1,0 +1,39 @@
+{
+  "source_sha256": "831f4afa47be18388f10be87fa5b81b7b6ab806036e79900c6edda435a2cbcf9",
+  "revision": "dcc13151ab4b311fd02443cfafb4a4e023d95592",
+  "successes": 6,
+  "rejections": 7,
+  "instances": [
+    {
+      "scenario": "unique",
+      "contract": "0xa12a4eB95Caa886fcFa7f8943633b91d803Edb36",
+      "deployment": "0x0fddf245e7535f90a9dd018410a4e81d34c387e257a884f51f953a109a9108bd",
+      "activation": "0xfcd0298202226339ecc8b7d2c55e5eb117fda2a6b570407278c5617e5e463974",
+      "frame_transactions": [
+        "0x824d5d9821370b6b42adf98487588acdf7dfb04f413ce515f03e69a30b34f804",
+        "0x4bad8e96dc0d8f3723815eefe4536d5caa6cbca20c3458eec94cd7e900ab63bb"
+      ],
+      "witness": null,
+      "workflow": "https://github.com/mohammadisina1988-jpg/frame-sift/actions/runs/43174522866"
+    },
+    {
+      "scenario": "ambiguous",
+      "contract": "0xefb5A69a0a8F929Bae4F2aA329B2fA31aCaCFf1F",
+      "deployment": "0x1efea58bf318c16161c86f190c327cf7b6b4fc5a353cfcfa471d780d074a967a",
+      "activation": "0x65248851e675256404d1e305339f0b118104d3f099dbefac3657f415577e4a81",
+      "frame_transactions": [],
+      "witness": {
+        "bits": "010",
+        "left": [
+          "alpha",
+          "gamma"
+        ],
+        "right": [
+          "beta",
+          "alpha"
+        ]
+      },
+      "workflow": "https://github.com/mohammadisina1988-jpg/frame-sift/actions/runs/43174532472"
+    }
+  ]
+}

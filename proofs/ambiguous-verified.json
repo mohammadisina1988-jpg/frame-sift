@@ -1,0 +1,209 @@
+{
+  "scenario": "ambiguous",
+  "contract": "0xefb5A69a0a8F929Bae4F2aA329B2fA31aCaCFf1F",
+  "deployment": "0x1efea58bf318c16161c86f190c327cf7b6b4fc5a353cfcfa471d780d074a967a",
+  "source_sha256": "831f4afa47be18388f10be87fa5b81b7b6ab806036e79900c6edda435a2cbcf9",
+  "revision": "dcc13151ab4b311fd02443cfafb4a4e023d95592",
+  "trace": [
+    {
+      "label": "deploy",
+      "hash": "0x1efea58bf318c16161c86f190c327cf7b6b4fc5a353cfcfa471d780d074a967a",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "signer": "0xfb49c1fec27b2c17688958ea5c3a11c18fe7c453",
+      "args": {
+        "args": [
+          "https://raw.githubusercontent.com/mohammadisina1988-jpg/frame-sift/dcc13151ab4b311fd02443cfafb4a4e023d95592/feeds/ambiguous"
+        ]
+      },
+      "error": null,
+      "state": {
+        "activation": null,
+        "next_seq": 0,
+        "retained": 0,
+        "source": "https://raw.githubusercontent.com/mohammadisina1988-jpg/frame-sift/dcc13151ab4b311fd02443cfafb4a4e023d95592/feeds/ambiguous"
+      }
+    },
+    {
+      "label": "before-audit",
+      "hash": "0xf84d0f1a1d52d7ab5b2dd2a8855ab19e606ad6ecd4e0aa63d66929b6ca8cf9ca",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 4,
+      "disagree": 0,
+      "idle": 1,
+      "signer": "0xbeba32454ae4200182f735741ffbc1b1c82d537c",
+      "args": {
+        "method": "ingest",
+        "args": [
+          0
+        ]
+      },
+      "error": "No active codebook",
+      "state": {
+        "activation": null,
+        "next_seq": 0,
+        "retained": 0,
+        "source": "https://raw.githubusercontent.com/mohammadisina1988-jpg/frame-sift/dcc13151ab4b311fd02443cfafb4a4e023d95592/feeds/ambiguous"
+      }
+    },
+    {
+      "label": "activate",
+      "hash": "0x65248851e675256404d1e305339f0b118104d3f099dbefac3657f415577e4a81",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "signer": "0xbeba32454ae4200182f735741ffbc1b1c82d537c",
+      "args": {
+        "method": "activate",
+        "args": []
+      },
+      "error": null,
+      "state": {
+        "activation": {
+          "book": [
+            [
+              "alpha",
+              "0"
+            ],
+            [
+              "beta",
+              "01"
+            ],
+            [
+              "gamma",
+              "10"
+            ]
+          ],
+          "book_sha256": "ef3d41bd265ca67b2d31bf7085b229295c6d9ee3ccf730ba43341970336b8a1c",
+          "outcome": "AMBIGUOUS",
+          "witness": {
+            "bits": "010",
+            "left": [
+              "alpha",
+              "gamma"
+            ],
+            "right": [
+              "beta",
+              "alpha"
+            ]
+          }
+        },
+        "next_seq": 0,
+        "retained": 0,
+        "source": "https://raw.githubusercontent.com/mohammadisina1988-jpg/frame-sift/dcc13151ab4b311fd02443cfafb4a4e023d95592/feeds/ambiguous"
+      }
+    },
+    {
+      "label": "blocked-frame",
+      "hash": "0xb8f0ded667d633aefd22a0c8e595e330e173887a0965d88f3a91a5486e570667",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 4,
+      "disagree": 0,
+      "idle": 1,
+      "signer": "0xfb49c1fec27b2c17688958ea5c3a11c18fe7c453",
+      "args": {
+        "method": "ingest",
+        "args": [
+          0
+        ]
+      },
+      "error": "No active codebook",
+      "state": {
+        "activation": {
+          "book": [
+            [
+              "alpha",
+              "0"
+            ],
+            [
+              "beta",
+              "01"
+            ],
+            [
+              "gamma",
+              "10"
+            ]
+          ],
+          "book_sha256": "ef3d41bd265ca67b2d31bf7085b229295c6d9ee3ccf730ba43341970336b8a1c",
+          "outcome": "AMBIGUOUS",
+          "witness": {
+            "bits": "010",
+            "left": [
+              "alpha",
+              "gamma"
+            ],
+            "right": [
+              "beta",
+              "alpha"
+            ]
+          }
+        },
+        "next_seq": 0,
+        "retained": 0,
+        "source": "https://raw.githubusercontent.com/mohammadisina1988-jpg/frame-sift/dcc13151ab4b311fd02443cfafb4a4e023d95592/feeds/ambiguous"
+      }
+    },
+    {
+      "label": "reaudit",
+      "hash": "0xa0d80f2a7e4d73b9695252b6ccf9364d73fc47e3aeb9d25cbfcf7ada1feeff2b",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "signer": "0xfb49c1fec27b2c17688958ea5c3a11c18fe7c453",
+      "args": {
+        "method": "activate",
+        "args": []
+      },
+      "error": "Already audited",
+      "state": {
+        "activation": {
+          "book": [
+            [
+              "alpha",
+              "0"
+            ],
+            [
+              "beta",
+              "01"
+            ],
+            [
+              "gamma",
+              "10"
+            ]
+          ],
+          "book_sha256": "ef3d41bd265ca67b2d31bf7085b229295c6d9ee3ccf730ba43341970336b8a1c",
+          "outcome": "AMBIGUOUS",
+          "witness": {
+            "bits": "010",
+            "left": [
+              "alpha",
+              "gamma"
+            ],
+            "right": [
+              "beta",
+              "alpha"
+            ]
+          }
+        },
+        "next_seq": 0,
+        "retained": 0,
+        "source": "https://raw.githubusercontent.com/mohammadisina1988-jpg/frame-sift/dcc13151ab4b311fd02443cfafb4a4e023d95592/feeds/ambiguous"
+      }
+    }
+  ],
+  "frames": []
+}

@@ -43,7 +43,11 @@ node --test tests/rpc-preflight.test.cjs
 ```
 
 The StudioNet workflow deploys each fixture and independently enumerates the
-parses of its example frames. The consensus pattern follows the
+parses of its example frames. Both deployments verified 13 finalized receipts,
+including two stored frames and seven expected rejections.
+[StudioNet receipts and contract addresses](proofs/README.md) · [Submission text](SUBMISSION.md)
+
+The consensus pattern follows the
 [GenLayer Equivalence Principle](https://docs.genlayer.com/developers/intelligent-contracts/equivalence-principle).
 Generic CLI transport and test signing helpers are reused under MIT from
 [ArchiveLift](https://github.com/gabrieladash123-bit/archive-lift).
